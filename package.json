@@ -1,37 +1,25 @@
 {
-  "name": "blakelmason.com",
-  "version": "1.0.0",
-  "description": "",
-  "dependencies": {
-    "react-hot-loader": "^4.11.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.6",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "webpack": "^4.33.0",
-    "webpack-cli": "^3.3.3",
-    "webpack-dev-server": "^3.7.1"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production",
-    "dev": "webpack-dev-server --mode development"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/blakelmason/blakelmason.com.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/blakelmason/blakelmason.com/issues"
-  },
-  "homepage": "https://github.com/blakelmason/blakelmason.com#readme"
+   "name": "blakelmason.com",
+   "version": "1.0.0",
+   "description": "",
+   "main": "prettier.config.js",
+   "scripts": {
+      "dev": "concurrently \"nodemon --experimental-modules server.js\" \"cd public && npm run dev\"",
+      "start": "node server.js"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/blakelmason/blakelmason.com.git"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/blakelmason/blakelmason.com/issues"
+   },
+   "homepage": "https://github.com/blakelmason/blakelmason.com#readme",
+   "type": "module",
+   "dependencies": {
+      "express": "^4.17.1"
+   }
 }
