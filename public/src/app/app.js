@@ -9,23 +9,25 @@ const toolList = [
    ['HTML', 'https://www.w3schools.com/html/html_intro.asp'],
    ['CSS', 'https://www.w3schools.com/html/html_css.asp'],
    ['Bootstrap', 'https://getbootstrap.com/'],
-   'jQuery',
-   'Handlebars.js',
-   'Node.js',
-   'Express.js',
-   'MongoDB',
-   'Mongoose',
-   'SQL',
-   'MySQL',
-   'PostgreSQL',
-   'Sequelize',
-   'React',
-   'React-Router',
-   'Redux',
-   'JWT',
-   'Webpack',
-   'Babel',
-   'Heroku',
+   ['jQuery'],
+   ['Handlebars.js'],
+   ['Node.js'],
+   ['Express.js'],
+   ['MongoDB'],
+   ['Mongoose'],
+   ['SQL'],
+   ['MySQL'],
+   ['PostgreSQL'],
+   ['Sequelize'],
+   ['React'],
+   ['React-Router'],
+   ['Redux'],
+   ['Moment.js'],
+   ['Cheerio'],
+   ['JWT'],
+   ['Webpack'],
+   ['Babel'],
+   ['Heroku'],
 ]
 
 class App extends Component {
@@ -37,11 +39,9 @@ class App extends Component {
                   <div className="col">
                      <h1
                         style={{
-                           fontSize: '3.5rem',
-                           fontWeight: 'bold',
-                           WebkitTextStroke: '2px black',
+                           background: 'rgb(255,255,255, .8',
                         }}
-                        className="text-white my-5"
+                        className="my-5 bg-dark text-white border border-secondary rounded d-inline-block px-3 pt-2 pb-2"
                      >
                         Blake Mason - Web Portfolio
                      </h1>
@@ -58,15 +58,10 @@ class App extends Component {
                         }}
                      >
                         <div
-                           className="text-white d-flex justify-content-center align-items-center mr-2"
-                           style={{
-                              WebkitTextStroke: '2px black',
-                              fontSize: '2rem',
-                              fontWeight: '750',
-                              height: 30,
-                           }}
+                           className="text-white bg-dark rounded border border-secondary px-2 d-flex justify-content-center align-items-center my-1 mr-2"
+                           style={{ height: 31 }}
                         >
-                           Tools:
+                           <strong>Tools :</strong>
                         </div>
                         {toolList.map(tool => (
                            <Tool text={tool[0]} link={tool[1]} key={tool[0]} />
