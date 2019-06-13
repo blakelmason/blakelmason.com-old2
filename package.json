@@ -4,7 +4,7 @@
    "description": "",
    "main": "prettier.config.js",
    "scripts": {
-      "dev": "concurrently \"nodemon --experimental-modules server.js\" \"cd public && npm run dev\"",
+      "dev": "nodemon --experimental-modules server.js",
       "start": "node server.js"
    },
    "repository": {
