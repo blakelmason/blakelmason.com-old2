@@ -4,41 +4,58 @@ import ReactDOM from 'react-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './app.scss'
 import Tool from './components/Tool'
-
-const toolList = [
-  ['HTML', 'https://www.w3schools.com/html/html_intro.asp'],
-  ['CSS', 'https://www.w3schools.com/html/html_css.asp'],
-  ['Bootstrap', 'https://getbootstrap.com/'],
-  ['jQuery'],
-  ['Handlebars.js'],
-  ['Node.js'],
-  ['Express.js'],
-  ['MongoDB'],
-  ['Mongoose'],
-  ['SQL'],
-  ['MySQL'],
-  ['PostgreSQL'],
-  ['Sequelize'],
-  ['React'],
-  ['React-Router'],
-  ['Redux'],
-  ['Moment.js'],
-  ['Cheerio'],
-  ['JWT'],
-  ['Webpack'],
-  ['Babel'],
-  ['Heroku'],
-]
+import toolList from './toolList'
+import { Card } from 'react-bootstrap'
 
 class App extends Component {
   render() {
     return (
       <div>
-        <div className="container">
-          <div className="row">
-            <div className="col">
-              <div className="my-5 text-white pt-2 pb-2 display-4 animated fadeInDown">
-                Blake Mason - Web Portfolio
+        <div
+          className="my-5"
+          style={{
+            background: 'rgb(0,0,0,.5)',
+            paddingTop: 22,
+            paddingBottom: 37,
+          }}
+        >
+          <div className="container">
+            <div className="row">
+              <div className="col">
+                <div
+                  className="text-white display-4 animated fadeInDown"
+                  style={{ marginBottom: 25 }}
+                >
+                  Blake Mason - Web Portfolio
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="container">
+            <div className="row">
+              <div className="col">
+                <div
+                  style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    flex: 1,
+                    overflowY: 'auto',
+                  }}
+                >
+                  <div
+                    className="text-white display-4 px=r-2 my-1 position-relative"
+                    style={{
+                      height: 31,
+                      fontSize: '1.6rem',
+                      bottom: 2,
+                    }}
+                  >
+                    Tools :
+                  </div>
+                  {toolList.map(tool => (
+                    <Tool text={tool[0]} link={tool[1]} key={tool[0]} />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -46,28 +63,26 @@ class App extends Component {
         <div className="container">
           <div className="row">
             <div className="col">
-              <div
+              <Card
                 style={{
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  flex: 1,
-                  overflowY: 'auto',
+                  width: '18rem',
+                  boxShadow: '0 .5rem 1rem rgba(0,0,0,.6)',
                 }}
+                className="bg-dark text-light"
               >
-                <div
-                  className="text-white display-4 px-2 my-1 position-relative"
-                  style={{
-                    height: 31,
-                    fontSize: '1.6rem',
-                    bottom: 2,
-                  }}
-                >
-                  Tools :
-                </div>
-                {toolList.map(tool => (
-                  <Tool text={tool[0]} link={tool[1]} key={tool[0]} />
-                ))}
-              </div>
+                <Card.Body>
+                  <Card.Title>Card Title</Card.Title>
+                  <Card.Subtitle className="mb-2 text-muted">
+                    Card Subtitle
+                  </Card.Subtitle>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </Card.Text>
+                  <Card.Link href="#">Card Link</Card.Link>
+                  <Card.Link href="#">Another Link</Card.Link>
+                </Card.Body>
+              </Card>
             </div>
           </div>
         </div>

@@ -1,10 +1,22 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ErrorOverlayPlugin = require('error-overlay-webpack-plugin')
 const ip = require('ip')
+const path = require('path')
 
 module.exports = {
+  entry: ['./src/index.js'],
+  output: {
+    path: path.join(__dirname, 'dist'),
+    filename: 'index.js',
+  },
+  devtool: 'cheap-module-source-map',
   devServer: {
     host: ip.address(),
     port: 8080,
+    overlay: {
+      warnings: true,
+      errors: true,
+    },
   },
   module: {
     rules: [
@@ -34,6 +46,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new ErrorOverlayPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html',
