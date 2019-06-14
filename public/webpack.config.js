@@ -11,7 +11,7 @@ module.exports = {
   },
   devtool: 'cheap-module-source-map',
   devServer: {
-    host: ip.address(),
+    host: 'localhost',
     port: 8080,
     overlay: {
       warnings: true,
