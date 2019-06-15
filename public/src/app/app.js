@@ -11,7 +11,7 @@ import Project from './components/Project'
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="mb-5">
         <div
           className="my-5"
           style={{
@@ -24,7 +24,7 @@ class App extends Component {
             <div className="row">
               <div className="col">
                 <div
-                  className="text-white display-4"
+                  className="text-white display-4 animated fadeInDown"
                   style={{ marginBottom: 25 }}
                 >
                   Blake Mason - Web Portfolio
@@ -43,7 +43,7 @@ class App extends Component {
                   }}
                 >
                   <div
-                    className="text-white display-4 px=r-2 my-1 position-relative"
+                    className="text-white display-4 mr-2 ml-1 my-1 position-relative"
                     style={{
                       height: 31,
                       fontSize: '1.6rem',
@@ -70,12 +70,15 @@ class App extends Component {
             <div className="col">
               <div
                 style={{
-                  gridTemplateColumns: 'repeat( auto-fit, minmax(250px, 1fr) )',
+                  display: 'grid',
+                  gridGap: 30,
+                  gridTemplateColumns: 'repeat(auto-fill, minmax(15rem, 1fr))',
                 }}
-              />
-              {projects.map(project => (
-                <Project key={project.name} {...project} />
-              ))}
+              >
+                {projects.map(project => (
+                  <Project key={project.name} {...project} />
+                ))}
+              </div>
             </div>
           </div>
         </div>

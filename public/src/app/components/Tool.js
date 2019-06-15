@@ -9,7 +9,7 @@ class Tool extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({ show: true })
-    }, this.props.time * 125)
+    }, this.props.time * 50)
   }
 
   render() {
