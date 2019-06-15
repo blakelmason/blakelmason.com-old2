@@ -5,7 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './app.scss'
 import Tool from './components/Tool'
 import toolList from './toolList'
-import { Card } from 'react-bootstrap'
+import projects from './projects'
+import Project from './components/Project'
 
 class App extends Component {
   render() {
@@ -23,7 +24,7 @@ class App extends Component {
             <div className="row">
               <div className="col">
                 <div
-                  className="text-white display-4 animated fadeInDown"
+                  className="text-white display-4"
                   style={{ marginBottom: 25 }}
                 >
                   Blake Mason - Web Portfolio
@@ -39,7 +40,6 @@ class App extends Component {
                     display: 'flex',
                     flexWrap: 'wrap',
                     flex: 1,
-                    overflowY: 'auto',
                   }}
                 >
                   <div
@@ -52,8 +52,13 @@ class App extends Component {
                   >
                     Tools :
                   </div>
-                  {toolList.map(tool => (
-                    <Tool text={tool[0]} link={tool[1]} key={tool[0]} />
+                  {toolList.map((tool, index) => (
+                    <Tool
+                      text={tool[0]}
+                      link={tool[1]}
+                      key={tool[0]}
+                      time={index}
+                    />
                   ))}
                 </div>
               </div>
@@ -63,26 +68,14 @@ class App extends Component {
         <div className="container">
           <div className="row">
             <div className="col">
-              <Card
+              <div
                 style={{
-                  width: '18rem',
-                  boxShadow: '0 .5rem 1rem rgba(0,0,0,.6)',
+                  gridTemplateColumns: 'repeat( auto-fit, minmax(250px, 1fr) )',
                 }}
-                className="bg-dark text-light"
-              >
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">
-                    Card Subtitle
-                  </Card.Subtitle>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </Card.Text>
-                  <Card.Link href="#">Card Link</Card.Link>
-                  <Card.Link href="#">Another Link</Card.Link>
-                </Card.Body>
-              </Card>
+              />
+              {projects.map(project => (
+                <Project key={project.name} {...project} />
+              ))}
             </div>
           </div>
         </div>
