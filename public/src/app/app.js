@@ -11,9 +11,9 @@ import Project from './components/Project'
 class App extends Component {
   render() {
     return (
-      <div className="mb-5">
+      <div>
         <div
-          className="my-5"
+          className="mb-5 mt-sm-5"
           style={{
             background: 'rgb(0,0,0,.5)',
             paddingTop: 22,
@@ -24,7 +24,7 @@ class App extends Component {
             <div className="row">
               <div className="col">
                 <div
-                  className="text-white display-4 animated fadeInDown"
+                  className="text-white display-4 animated fadeIn"
                   style={{ marginBottom: 25 }}
                 >
                   Blake Mason - Web Portfolio
@@ -65,7 +65,7 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <div className="container">
+        <div className="container mb-3 mb-sm-5">
           <div className="row">
             <div className="col">
               <div

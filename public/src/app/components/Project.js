@@ -8,7 +8,7 @@ const Project = ({ name, description, tools, github, url }) => {
         boxShadow: '.2rem .2rem 1rem rgba(0,0,0,.6)',
         background: 'rgb(0,0,0,.8)',
       }}
-      className="text-light hover"
+      className="text-light hover animated fadeIn"
     >
       <Card.Body className="d-flex flex-column justify-content-between">
         <div>
