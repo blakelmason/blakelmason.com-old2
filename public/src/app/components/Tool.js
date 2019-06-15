@@ -33,6 +33,9 @@ class Tool extends Component {
           ) : (
             <Button
               variant="outline-light"
+              style={{
+                overflow: 'hidden',
+              }}
               size="sm"
               className={`d-flex align-items-center justify-content-center m-1 animated ${
                 show ? 'fadeIn' : 'opacity-0'
