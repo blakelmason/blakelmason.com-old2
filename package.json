@@ -1,27 +1,28 @@
 {
-   "name": "blakelmason.com",
-   "version": "1.0.0",
-   "description": "",
-   "main": "prettier.config.js",
-   "scripts": {
-      "dev": "nodemon --experimental-modules server.js",
-      "start": "node server.js"
-   },
-   "repository": {
-      "type": "git",
-      "url": "git+https://github.com/blakelmason/blakelmason.com.git"
-   },
-   "keywords": [],
-   "author": "",
-   "license": "ISC",
-   "bugs": {
-      "url": "https://github.com/blakelmason/blakelmason.com/issues"
-   },
-   "homepage": "https://github.com/blakelmason/blakelmason.com#readme",
-   "type": "module",
-   "dependencies": {
-      "express": "^4.17.1",
-      "react": "^16.8.6",
-      "react-media": "^1.9.2"
-   }
+  "name": "blakelmason.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "prettier.config.js",
+  "scripts": {
+    "dev": "nodemon --experimental-modules server.js",
+    "start": "node server.js",
+    "heroku-postbuild": "npm i && cd client && npm i && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blakelmason/blakelmason.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blakelmason/blakelmason.com/issues"
+  },
+  "homepage": "https://github.com/blakelmason/blakelmason.com#readme",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^16.8.6",
+    "react-media": "^1.9.2"
+  }
 }

@@ -6,7 +6,8 @@
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.9",
     "react-dom": "^16.8.6",
-    "react-hot-loader": "^4.11.0"
+    "react-hot-loader": "^4.11.0",
+    "react-media": "^1.9.2"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
@@ -29,7 +30,7 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production --config webpack.config.js"
   },
   "repository": {
     "type": "git",
