@@ -5,7 +5,7 @@
   "main": "prettier.config.js",
   "scripts": {
     "dev": "nodemon --experimental-modules server.js",
-    "start": "node server.js",
+    "start": "node --experimental-modules server.js",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm i && cd client && npm i"
   },
