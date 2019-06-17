@@ -14,4 +14,4 @@ server.get('/', (req, res) =>
   res.sendFile(path.join(__dirname + '/client/dist/index.html'))
 )
 
-server.listen(3000, () => console.log(`Listening on port ${PORT}`))
+server.listen(PORT, () => console.log(`Listening on port ${PORT}`))
