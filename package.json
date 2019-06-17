@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon --experimental-modules server.js",
     "start": "node server.js",
-    "heroku-postbuild": "npm i && cd client && npm i && npm run build"
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm i && cd client && npm i"
   },
   "repository": {
     "type": "git",
