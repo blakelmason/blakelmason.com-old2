@@ -1,6 +1,7 @@
 const toolList = [
   ['HTML', 'https://www.w3schools.com/html/html_intro.asp'],
   ['CSS', 'https://www.w3schools.com/html/html_css.asp'],
+  ['Sass', 'https://sass-lang.com/'],
   ['Bootstrap', 'https://getbootstrap.com/'],
   ['jQuery', 'https://jquery.com/'],
   ['Handlebars.js', 'https://handlebarsjs.com/'],
