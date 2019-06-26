@@ -6,7 +6,7 @@ const Project = ({ name, description, tools, github, url }) => {
     <Card
       style={{
         boxShadow: '.2rem .2rem 1rem rgba(0,0,0,.6)',
-        background: 'rgb(0,0,0,.8)',
+        background: 'rgba(0,0,0,.8)',
       }}
       className="text-light hover animated fadeIn"
     >
